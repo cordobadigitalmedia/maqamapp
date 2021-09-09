@@ -90,7 +90,7 @@ export const closest = (delta, range) => {
 export const fetchCountry = async (coords) => {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${coords.coords.latitude}&lon=${coords.coords.longitude}&appid=bac0d9d4291a192a34aec3ba5e9aab43&units=metric`
+      `http://api.openweathermap.org/data/2.5/weather?lat=${coords.coords.latitude}&lon=${coords.coords.longitude}&appid=${process.env.openweathermapToken}&units=metric`
     );
     const { sys, name, weather, main } = await response.json();
     return { sys, name, weather, main, error: false };
