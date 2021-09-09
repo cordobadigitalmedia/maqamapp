@@ -54,7 +54,7 @@ export default function TopNav() {
         <div className="order-2 md:order-3 flex items-center" id="nav-content">
           <a className="inline-block no-underline hover:text-black" href="#">
             <svg
-              class="fill-current hover:text-black"
+              className="fill-current hover:text-black"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
