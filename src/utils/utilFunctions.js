@@ -65,6 +65,13 @@ export const containsCat = ({ tariqa, type, country }, query) => {
   return false;
 };
 
+export const containsId = ({ id }, query) => {
+  if (id === query) {
+    return true;
+  }
+  return false;
+};
+
 export const calcDistance = (lat1, long1, lat2, long2) => {
   const R = 6371e3; //Earth radius in meters
   const T1 = toRadians(lat1);
