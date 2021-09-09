@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <TopNav />
+      <TopNav/>
 
       {categories.length > 0 &&
         categories.map((cat, i) => (

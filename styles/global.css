@@ -1,0 +1,17 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-2xl block py-2;
+    }
+
+    h2 {
+        @apply text-xl block py-2;
+    }
+    p {
+        @apply text-base block;
+    }
+}

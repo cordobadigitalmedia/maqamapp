@@ -1,8 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import useSWR from "swr";
 import parseMaqams from "../src/utils/parseMaqams";
 import TopNav from "../src/components/TopNav";
 import Footer from "../src/components/Footer";
+import Map from "../src/components/Map";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -11,6 +13,7 @@ export default function Maqam() {
     "https://maqamappres.vercel.app/json/maqams.json",
     fetcher
   );
+
   let maqams = [];
 
   if (error) return "An error has occurred.";
@@ -41,6 +44,13 @@ export default function Maqam() {
           </nav>
 
           <div className="w-full p-6 flex flex-col">
+            <Map
+              data={{
+                latitude: 32.2258746,
+                longitude: 35.6164504,
+                height: "18em",
+              }}
+            />
             <img
               className="object-cover md:h-96 xl:h-96 w-full hover:grow hover:shadow-lg"
               src="https://maqamappres.vercel.app/images/1_lg.jpg"
