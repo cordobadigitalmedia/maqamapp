@@ -7,6 +7,7 @@ import Footer from "../../../src/components/Footer";
 import Map from "../../../src/components/Map";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import AddFav from "../../../src/components/AddFav";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -81,25 +82,26 @@ export default function Maqam() {
             </nav>
 
             <div className="w-full flex flex-col p-3">
-              <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="md:flex">
-                  <div class="md:flex-shrink-0">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:flex-shrink-0">
                     <img
-                      class="h-48 w-full object-cover md:h-full md:w-48"
+                      className="h-48 w-full object-cover md:h-full md:w-48"
                       src={maqam.photo}
                       alt="Man looking at item at a store"
                     />
                   </div>
-                  <div class="p-8">
-                    <div class="uppercase tracking-wide text-md text-indigo-500 font-semibold">
-                      {maqam.type}: {maqam.name}
+                  <div className="p-8">
+                    <div className="flex">
+                      <div className="uppercase tracking-wide text-md text-indigo-500 font-semibold mr-2">
+                        {maqam.type}: {maqam.name}
+                      </div>
+                      <AddFav maqamid={maqam.id}/>
                     </div>
-                    <div
-                      class="capitalize block mt-1 text-md leading-tight text-gray-400"
-                    >
+                    <div className="capitalize block mt-1 text-md leading-tight text-gray-400">
                       Located in {maqam.country}
                     </div>
-                    <p class="mt-2 text-gray-700">{maqam.description}</p>
+                    <p className="mt-2 text-gray-700">{maqam.description}</p>
                   </div>
                 </div>
               </div>
