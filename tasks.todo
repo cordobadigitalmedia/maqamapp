@@ -2,8 +2,9 @@
 ✔ Add favourites function @done (9/10/2021, 5:23:05 PM)
 ✔ Add favourites style + add to detail page @done (9/10/2021, 6:14:52 PM)
 ✔ Favourites list @done (9/11/2021, 8:52:12 AM)
-☐ Search function and results page
+✔ Search function and results page @done (9/11/2021, 10:24:59 PM)
 ☐ Add marker with Google maps direction
 ☐ Form submission for maqam additions/edits
 ☐ Crumbtrail style
+☐ Maqam Logo and Text bigger in large screen and logo only in small screens
 ☐ Bug - addFav - remove fav not updating fav list immedialy
