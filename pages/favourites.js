@@ -53,12 +53,12 @@ export default function Favourites() {
         <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
           <BreadCrumbLevel1 name="favourites" />
           {maqams.length > 0 ? (
-            <div>
+            <>
               {" "}
               {maqams.map((maqam) => (
                 <MaqamList name="favourites" maqam={maqam} />
               ))}
-            </div>
+            </>
           ) : (
             <div className="p-6">You have no saved favourites</div>
           )}
