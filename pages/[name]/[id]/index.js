@@ -1,13 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import useSWR from "swr";
-import getMaqambyId from "../../../src/utils/getMaqambyId";
-import TopNav from "../../../src/components/TopNav";
-import Footer from "../../../src/components/Footer";
-import Map from "../../../src/components/Map";
+import getMaqambyId from "@/utils/getMaqambyId";
+import TopNav from "@/components/TopNav";
+import Footer from "@/components/Footer";
+import Map from "@/components/Map";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import AddFav from "../../../src/components/AddFav";
+import AddFav from "@/components/AddFav";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 

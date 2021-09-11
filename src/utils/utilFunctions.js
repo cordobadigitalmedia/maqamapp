@@ -72,6 +72,13 @@ export const containsId = ({ id }, query) => {
   return false;
 };
 
+export const containsIds = ({ id }, query) => {
+  if (query.includes(id)) {
+    return true;
+  }
+  return false;
+};
+
 export const calcDistance = (lat1, long1, lat2, long2) => {
   const R = 6371e3; //Earth radius in meters
   const T1 = toRadians(lat1);

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateFavourites, selectFav } from "./../../store/favDataSlice";
+import { updateFavourites, selectFav } from "@/store/favDataSlice";
 
 const AddFav = ({ maqamid }) => {
   const favourites = useSelector(selectFav);

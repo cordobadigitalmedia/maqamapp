@@ -1,8 +1,9 @@
 ✔ Store for favourites @done (9/10/2021, 12:35:15 PM)
 ✔ Add favourites function @done (9/10/2021, 5:23:05 PM)
 ✔ Add favourites style + add to detail page @done (9/10/2021, 6:14:52 PM)
-☐ Favourites list
+✔ Favourites list @done (9/11/2021, 8:52:12 AM)
 ☐ Search function and results page
 ☐ Add marker with Google maps direction
 ☐ Form submission for maqam additions/edits
 ☐ Crumbtrail style
+☐ Bug - addFav - remove fav not updating fav list immedialy
