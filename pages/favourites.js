@@ -60,7 +60,7 @@ export default function Favourites() {
               ))}
             </div>
           ) : (
-            <div>You have no saved favourites</div>
+            <div className="p-6">You have no saved favourites</div>
           )}
         </div>
       </section>
