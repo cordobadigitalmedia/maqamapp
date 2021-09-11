@@ -19,19 +19,27 @@ Object.filter = (obj, predicate) =>
 
 export default function Favourites() {
   const favourites = useSelector(selectFav);
-  let savedFavs = Object.keys(Object.filter(favourites, (fav) => fav === true))
-    .filter((fav) => fav !== "undefined")
-    .map((fav) => Number(fav));
+  console.log(favourites);
+  let savedFavs = [];
+  if (Object.keys(favourites).length > 0) {
+    savedFavs = Object.keys(Object.filter(favourites, (fav) => fav === true))
+      .filter((fav) => fav !== "undefined")
+      .map((fav) => Number(fav));
+  }
+
   const { data, error } = useSWR(
     "https://maqamappres.vercel.app/json/maqams.json",
     fetcher
   );
 
-  let maqams = {};
+  let maqams = [];
 
   if (error) return "An error has occurred.";
   if (!data) return "Loading...";
-  maqams = getMaqambyIds(data, savedFavs);
+
+  if (savedFavs.length > 0) {
+    maqams = getMaqambyIds(data, savedFavs);
+  }
 
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
@@ -44,9 +52,16 @@ export default function Favourites() {
       <section className="bg-white pt-2 pb-0">
         <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
           <BreadCrumbLevel1 name="favourites" />
-          {maqams.map((maqam) => (
-            <MaqamList name="favourites" maqam={maqam} />
-          ))}
+          {maqams.length > 0 ? (
+            <div>
+              {" "}
+              {maqams.map((maqam) => (
+                <MaqamList name="favourites" maqam={maqam} />
+              ))}
+            </div>
+          ) : (
+            <div>You have no saved favourites</div>
+          )}
         </div>
       </section>
 
