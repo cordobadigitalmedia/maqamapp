@@ -3,42 +3,28 @@ import Link from "next/link";
 export default function TopNav() {
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
-      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
-        <label for="menu-toggle" className="cursor-pointer md:hidden block">
-          <svg
-            className="fill-current text-gray-900"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-          >
-            <title>menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
-        </label>
-
-        <div
-          className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1"
-          id="menu"
-        >
-          <nav>
-            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-              <li>
-                <Link href="/about">
-                  <a className="inline-block no-underline hover:text-black hover:underline py-2 px-4">
-                    About
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </nav>
+      <div className="w-full container mx-auto flex flex-wrap items-end justify-between mt-0 px-6 py-3">
+        <div className="flex items-center" id="nav-content">
+          <Link href="/about">
+            <a className="inline-block no-underline hover:text-black hover:underline pr-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-info-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+              </svg>
+            </a>
+          </Link>
         </div>
-
         <div className="order-1 md:order-2">
           <Link href="/">
-            <a className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ">
-              <img className="w-8 mr-1" src="/icon.png" />
-              MAQAM APP
+            <a className="flex flex-col items-center">
+              <img className="w-12 sm:w-16 mr-1" src="/icon.png" />
+              <div>Maqam Finder</div>
             </a>
           </Link>
         </div>

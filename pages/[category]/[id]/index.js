@@ -13,8 +13,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Maqam() {
   const router = useRouter();
-  const { id, name } = router.query;
-  console.log(id, name);
+  const { id, category } = router.query;
 
   const { data, error } = useSWR(
     "https://maqamappres.vercel.app/json/maqams.json",
@@ -57,9 +56,9 @@ export default function Maqam() {
                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
                   />
                 </svg>
-                <Link href={`/${name}`}>
+                <Link href={`/${category}`}>
                   <a className="capitalize tracking-wide underline hover:no-underline text-gray-500 text-lg">
-                    {name}
+                    {category}
                   </a>
                 </Link>
                 <svg
@@ -112,6 +111,7 @@ export default function Maqam() {
                   latitude: maqam.latitude,
                   longitude: maqam.longitude,
                   height: "18em",
+                  zoom: 16,
                 }}
               />
             </div>
