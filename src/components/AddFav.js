@@ -20,7 +20,7 @@ const AddFav = ({ maqamid }) => {
   };
 
   return (
-    <div>
+    <div className="mt-2 mb-0">
       {fav === false ? (
         <a href="#" onClick={() => markFav(true)}>
           <svg

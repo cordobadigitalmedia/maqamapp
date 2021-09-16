@@ -37,7 +37,7 @@ export default function Maqam() {
       <TopNav />
 
       {"id" in maqam && (
-        <section className="bg-white pt-2 pb-0">
+        <section className="bg-gray-100 pt-2 pb-0">
           <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
             <nav id="breadcrumb" className="w-full z-30 top-0 px-3 py-1">
               <div className="w-full container mx-auto flex flex-wrap mt-0">

@@ -5,8 +5,8 @@
 ✔ Search function and results page @done (9/11/2021, 10:24:59 PM)
 ✔ Add marker with Google maps direction @done (9/12/2021, 6:52:47 AM)
 ✔ Maqam Logo and Text bigger in large screen and logo only in small screens @done (9/12/2021, 8:35:17 AM)
-☐ maqam list+search-add arabic text and move favourites to image
-☐ mobile menu function
+✔ maqam list+search-add arabic text and move favourites to image @done (9/16/2021, 7:45:00 AM)
+✔ mobile menu function @done (9/16/2021, 7:48:09 AM)
 ☐ Crumbtrail style
 ☐ Form submission for maqam additions/edits
 ☐ Bug - addFav - remove fav not updating fav list immedialy

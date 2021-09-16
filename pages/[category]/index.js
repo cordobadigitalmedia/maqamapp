@@ -21,9 +21,10 @@ export default function Maqams() {
   if (error) return "An error has occurred.";
   if (!data) return "Loading...";
   maqams = parseMaqams(data, category, "", {});
+  console.log(maqams);
 
   return (
-    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    <div className="text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Head>
         <title>Maqam App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +32,7 @@ export default function Maqams() {
 
       <TopNav />
 
-      <section className="bg-white pt-2 pb-0">
+      <section className="bg-gray-100 pt-2 pb-0">
         <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
           <BreadCrumbLevel1 name={category} />
           {maqams.map((maqam) => (

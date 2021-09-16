@@ -49,7 +49,7 @@ export default function Favourites() {
       </Head>
 
       <TopNav />
-      <section className="bg-white pt-2 pb-0">
+      <section className="bg-gray-100 pt-2 pb-0">
         <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
           <BreadCrumbLevel1 name="favourites" />
           {maqams.length > 0 ? (

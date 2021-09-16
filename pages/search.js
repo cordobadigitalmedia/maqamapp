@@ -43,14 +43,14 @@ export default function Search() {
       </Head>
 
       <TopNav />
-      <section className="bg-white pt-2 pb-0">
+      <section className="bg-gray-100 pt-2 pb-0">
         <div className="container mx-auto flex items-center flex-wrap">
           <BreadCrumbLevel1 name="search" />
         </div>
         <div className="container mx-auto flex items-center px-6">
           <input
             type="text"
-            class="mt-1 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            class="mt-1 w-full rounded-md bg-gray-200 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
             placeholder="Type to filter maqams"
             onChange={(evt) => performSearch(evt)}
           />

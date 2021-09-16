@@ -2,9 +2,18 @@ import Link from "next/link";
 
 export default function TopNav() {
   return (
-    <nav id="header" className="w-full z-30 top-0 py-1">
+    <nav id="header" className="w-full z-30 top-0 py-1 bg-white">
       <div className="w-full container mx-auto flex flex-wrap items-end justify-between mt-0 px-6 py-3">
-        <div className="flex items-center" id="nav-content">
+        <div className="order-1 md:order-2">
+          <Link href="/">
+            <a className="flex flex-row items-end">
+              <img className="w-8 sm:w-16" src="/icon.png" />
+              <div className="font-titleEngAr sm:text-2xl text-lg">Maqam Finder</div>
+            </a>
+          </Link>
+        </div>
+
+        <div className="order-2 md:order-3 flex items-center" id="nav-content">
           <Link href="/about">
             <a className="inline-block no-underline hover:text-black hover:underline pr-4">
               <svg
@@ -19,17 +28,6 @@ export default function TopNav() {
               </svg>
             </a>
           </Link>
-        </div>
-        <div className="order-1 md:order-2">
-          <Link href="/">
-            <a className="flex flex-col items-center">
-              <img className="w-12 sm:w-16 mr-1" src="/icon.png" />
-              <div>Maqam Finder</div>
-            </a>
-          </Link>
-        </div>
-
-        <div className="order-2 md:order-3 flex items-center" id="nav-content">
           <Link href="/favourites">
             <a className="inline-block no-underline hover:text-black">
               <svg

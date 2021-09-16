@@ -20,7 +20,7 @@ export default function Home() {
   console.log(categories);
 
   return (
-    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    <div className="text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Head>
         <title>Maqam App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,10 +30,10 @@ export default function Home() {
 
       {categories.length > 0 &&
         categories.map((cat, i) => (
-          <section className="bg-white pt-2 pb-0">
+          <section className="bg-gray-100 pt-2 pb-0">
             <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
               <nav id="store" className="w-full z-30 top-0 px-6 py-1">
-                <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+                <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-0 py-3">
                   <a
                     className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
                     href="#"
@@ -47,11 +47,11 @@ export default function Home() {
                   <Link href={`/${catitem.name.toLowerCase()}`}>
                     <a>
                       <img
-                        className="object-cover md:h-48 xl:h-64 w-full hover:grow hover:shadow-lg"
+                        className="object-cover md:h-48 xl:h-64 w-full hover:grow hover:shadow-2xl rounded-lg shadow"
                         src={catitem.url}
                       />
-                      <div className="pt-3 flex items-center justify-between">
-                        <p className="">{catitem.name}</p>
+                      <div className="pt-1 items-center">
+                        <p className="font-titleEngAr text-xl text-center">{catitem.name}</p>
                       </div>
                     </a>
                   </Link>
