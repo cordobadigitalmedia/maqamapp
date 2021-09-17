@@ -7,6 +7,7 @@
 ✔ Maqam Logo and Text bigger in large screen and logo only in small screens @done (9/12/2021, 8:35:17 AM)
 ✔ maqam list+search-add arabic text and move favourites to image @done (9/16/2021, 7:45:00 AM)
 ✔ mobile menu function @done (9/16/2021, 7:48:09 AM)
-☐ Crumbtrail style
-☐ Form submission for maqam additions/edits
+✔ Crumbtrail style @done (9/17/2021, 12:13:16 PM)
+✔ Form submission for maqam additions/edits @done (9/17/2021, 2:04:12 PM)
+☐ Add featured section on home
 ☐ Bug - addFav - remove fav not updating fav list immedialy

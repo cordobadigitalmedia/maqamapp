@@ -20,38 +20,36 @@ const AddFav = ({ maqamid }) => {
   };
 
   return (
-    <div className="mt-2 mb-0">
+    <div className="mb-0">
       {fav === false ? (
         <a href="#" onClick={() => markFav(true)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-heart"
+            class="h-6 w-6"
+            fill="none"
             viewBox="0 0 24 24"
-            className="text-gray-500 hover:text-black stroke-current hover:stroke-1 stroke-0"
+            stroke="currentColor"
           >
-            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
           </svg>
         </a>
       ) : (
-        <a
-          href="#"
-          onClick={() => markFav(false)}
-        >
+        <a href="#" onClick={() => markFav(false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
             fill="currentColor"
-            width="24"
-            height="24"
-            class="bi bi-heart-fill"
-            viewBox="0 0 24 24"
-            className="hover:text-black"
           >
             <path
-              fill-rule="evenodd"
-              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+              fillRule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clipRule="evenodd"
             />
           </svg>
         </a>

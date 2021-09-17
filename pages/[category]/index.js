@@ -33,7 +33,7 @@ export default function Maqams() {
       <TopNav />
 
       <section className="bg-gray-100 pt-2 pb-0">
-        <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
+        <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2 w-full">
           <BreadCrumbLevel1 name={category} />
           {maqams.map((maqam) => (
             <MaqamList name={category} maqam={maqam} />

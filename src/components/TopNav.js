@@ -2,55 +2,90 @@ import Link from "next/link";
 
 export default function TopNav() {
   return (
-    <nav id="header" className="w-full z-30 top-0 py-1 bg-white">
-      <div className="w-full container mx-auto flex flex-wrap items-end justify-between mt-0 px-6 py-3">
-        <div className="order-1 md:order-2">
+    <nav id="header" className="py-1 bg-white">
+      <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
+        <div className="flex flex-grow">
           <Link href="/">
             <a className="flex flex-row items-end">
               <img className="w-8 sm:w-16" src="/icon.png" />
-              <div className="font-titleEngAr sm:text-2xl text-lg">Maqam Finder</div>
+              <div className="font-titleEngAr sm:text-2xl text-lg">
+                Maqam Finder
+              </div>
             </a>
           </Link>
         </div>
 
-        <div className="order-2 md:order-3 flex items-center" id="nav-content">
-          <Link href="/about">
-            <a className="inline-block no-underline hover:text-black hover:underline pr-4">
+        <div className="flex items-center sm:mt-6 mr-2 mt-2" id="nav-content">
+          <Link href="/submit">
+            <a className="inline-block no-underline hover:text-black mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                fill="currentColor"
-                class="bi bi-info-circle-fill"
-                viewBox="0 0 16 16"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
               </svg>
             </a>
           </Link>
+
           <Link href="/favourites">
-            <a className="inline-block no-underline hover:text-black">
+            <a className="inline-block no-underline hover:text-black mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                fill="currentColor"
-                viewBox="0 0 16 16"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </a>
+          </Link>
+          <Link href="/about">
+            <a className="inline-block no-underline hover:text-black mr-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
             </a>
           </Link>
           <Link href="/search">
-            <a className="inline-block no-underline hover:text-black ml-2">
+            <a className="inline-block no-underline hover:text-black">
               <svg
-                className="fill-current hover:text-black"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                className="h-6 w-6"
+                fill="none"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
             </a>
           </Link>

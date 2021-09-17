@@ -3,7 +3,7 @@ import AddFav from "@/components/AddFav";
 
 export default function MaqamList({ name, maqam }) {
   return (
-    <div className="w-full md:w-1/3 xl:w-1/4 p-3 m-3 flex flex-col h-full bg-white shadow-lg rounded-tl-full rounded-tr-full">
+    <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-3 m-3 flex flex-col h-full bg-white shadow-lg rounded-tl-full rounded-tr-full">
       <Link href={`/${name}/${maqam.id}`}>
         <a>
           <img

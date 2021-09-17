@@ -27,13 +27,12 @@ export default function Home() {
       </Head>
 
       <TopNav />
-
-      {categories.length > 0 &&
-        categories.map((cat, i) => (
-          <section className="bg-gray-100 pt-2 pb-0">
+      <section className="bg-gray-100 pt-2 pb-0 w-full mx-auto">
+        {categories.length > 0 &&
+          categories.map((cat, i) => (
             <div className="container mx-auto flex items-center flex-wrap pt-2 pb-2">
               <nav id="store" className="w-full z-30 top-0 px-6 py-1">
-                <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-0 py-3">
+                <div className="w-full container flex flex-wrap items-center justify-between mt-0 px-0 py-3">
                   <a
                     className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
                     href="#"
@@ -51,16 +50,17 @@ export default function Home() {
                         src={catitem.url}
                       />
                       <div className="pt-1 items-center">
-                        <p className="font-titleEngAr text-xl text-center">{catitem.name}</p>
+                        <p className="font-titleEngAr text-xl text-center">
+                          {catitem.name}
+                        </p>
                       </div>
                     </a>
                   </Link>
                 </div>
               ))}
             </div>
-          </section>
-        ))}
-
+          ))}
+      </section>
       <Footer />
     </div>
   );
